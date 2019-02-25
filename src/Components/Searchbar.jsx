@@ -3,8 +3,7 @@ import React from 'react'
 export default function Searchbar() {
     return (
         <div className="searchbar" >
-            <span>Search for a book</span>
-            <input type="text" />
+            <input type="search" placeholder="Search by book title, author..." />
             <button>Search</button>
         </div>
     )

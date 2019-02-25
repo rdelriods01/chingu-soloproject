@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+* {
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.superior {
+  margin: 2em;
+  text-align: center;
+  h1 {
+    color: #9da2a7;
+  }
+  .searchbar {
+    input {
+      width: 50vw;
+      border: none;
+      padding: 7px;
+      background-color: #fbfbfb;
+      box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.14);
+    }
+    input::placeholder {
+      color: #9da2a7;
+    }
+    input:focus {
+      background-color: white;
+      box-shadow: none;
+      color: inherit;
+    }
+    button {
+      padding: 7px 16px;
+      border: none;
+      box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.14);
+      color: white;
+      background-color: #14d188;
+      font-weight: bold;
+    }
+  }
+}

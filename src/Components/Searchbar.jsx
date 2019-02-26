@@ -22,6 +22,10 @@ export class Searchbar extends Component {
     handleChange = (ev) => {
         this.setState({
             searchInput: ev.target.value
+        }, () => {
+            if (this.state.searchInput === '') {
+                this.props.reset();
+            }
         })
     }
     searchBook = () => {

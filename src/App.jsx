@@ -23,12 +23,20 @@ class App extends Component {
       })
     })
   }
+
+  reset = () => {
+    this.setState({
+      items: []
+    }, () => {
+      console.log(this.state.items)
+    })
+  }
   render() {
     return (
       <div className="App">
         <div className="upper">
           <h1>BOOK FINDER</h1>
-          <Searchbar search={(query) => this.searchBook(query)} />
+          <Searchbar search={(query) => this.searchBook(query)} reset={this.reset} />
         </div>
         <div className="lower">
           <Gallery items={this.state.items} />

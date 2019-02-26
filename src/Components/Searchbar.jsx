@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export class Searchbar extends Component {
 
     state = {
-        searchInput: ''
+        searchInput: '',
     }
 
     render() {
@@ -22,6 +22,10 @@ export class Searchbar extends Component {
     handleChange = (ev) => {
         this.setState({
             searchInput: ev.target.value
+        }, () => {
+            if (this.state.searchInput === '') {
+                this.props.reset();
+            }
         })
     }
     searchBook = () => {
@@ -29,6 +33,7 @@ export class Searchbar extends Component {
             alert('Please provide a title or author in the input search')
         } else {
             console.log('It will search for: ' + this.state.searchInput);
+            this.props.search(this.state.searchInput);
         }
     }
 }

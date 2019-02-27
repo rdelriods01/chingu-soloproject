@@ -44,12 +44,12 @@ body {
 }
 .lower {
   padding: 2em;
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1300px) {
     .gallery {
       grid-template-columns: 1fr 1fr !important;
     }
   }
-  @media only screen and (max-width: 650px) {
+  @media only screen and (max-width: 850px) {
     .gallery {
       grid-template-columns: 1fr !important;
     }
@@ -62,11 +62,13 @@ body {
       background-color: white;
       border-radius: 10px;
       padding: 1em;
+      height: 80%;
+      margin-bottom: 2em;
       .grid {
         display: grid;
         grid-template-columns: 2fr 3fr;
         grid-gap: 1em;
-
+        height: 100%;
         img {
           margin: auto;
           margin-top: -2em;

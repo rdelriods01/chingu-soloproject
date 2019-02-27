@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+* {
+  font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.upper {
+  margin: 2em;
+  text-align: center;
+  h1 {
+    color: #9da2a7;
+  }
+  .searchbar {
+    input {
+      width: 50vw;
+      border: none;
+      padding: 7px;
+      background-color: #fbfbfb;
+      box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.14);
+    }
+    input::placeholder {
+      color: #9da2a7;
+    }
+    input:focus {
+      background-color: white;
+      box-shadow: none;
+      color: inherit;
+    }
+    button {
+      padding: 7px 16px;
+      border: none;
+      box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.14);
+      color: white;
+      background-color: #14d188;
+      font-weight: bold;
+    }
+  }
+}
+.lower {
+  padding: 2em;
+  @media only screen and (max-width: 1300px) {
+    .gallery {
+      grid-template-columns: 1fr 1fr !important;
+    }
+  }
+  @media only screen and (max-width: 850px) {
+    .gallery {
+      grid-template-columns: 1fr !important;
+    }
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2em;
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 1em;
+      height: 80%;
+      margin-bottom: 2em;
+      .grid {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-gap: 1em;
+        height: 100%;
+        img {
+          margin: auto;
+          margin-top: -2em;
+        }
+        .details {
+          position: relative;
+          p,
+          h4 {
+            margin: 0;
+            color: dimgray;
+          }
+          p {
+            font-size: 0.8em;
+          }
+          h4 {
+            margin-bottom: 5px;
+          }
+          .btn {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            a {
+              margin: auto;
+              display: block;
+              width: 80%;
+              background-color: #14d188;
+              border: none;
+              border-radius: 5px;
+              padding: 6px 0;
+              color: white;
+              font-weight: bold;
+              text-decoration: none;
+              text-align: center;
+              font-size: 0.8em;
+            }
+            a:hover {
+              background-color: #10ad70;
+            }
+          }
+        }
+      }
+    }
+  }
+  .notgallery {
+    color: #9da2a7;
+    text-align: center;
+    font-weight: bold;
+    span {
+      padding-right: 0.5em;
+      font-size: 1.2em;
+    }
+  }
+}

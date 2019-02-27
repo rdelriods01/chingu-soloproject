@@ -11,14 +11,19 @@ const fb = firebase.initializeApp(fbconfig);
 class App extends Component {
 
   state = {
-    items: []
+    items: [],
+    loading: false
   }
 
   searchBook = (query) => {
+    this.setState({
+      loading: true
+    })
     const readBooks = fb.functions().httpsCallable('searchBook');
     readBooks(query).then(res => {
       console.log(res);
       this.setState({
+        loading: false,
         items: res.data.items
       })
     })
@@ -39,7 +44,13 @@ class App extends Component {
           <Searchbar search={(query) => this.searchBook(query)} reset={this.reset} />
         </div>
         <div className="lower">
-          <Gallery items={this.state.items} />
+          {
+            this.state.loading ?
+              <div className="loader">Loading...</div> :
+              this.state.items.length > 1 ?
+                <Gallery items={this.state.items} /> :
+                <p className="notgallery" ><span>☹️</span> Nothing Here Yet - Try Searching For A Book! </p>
+          }
         </div>
       </div>
     );

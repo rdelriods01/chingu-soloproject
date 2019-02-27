@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
+import './loader.scss';
+import './notifications.scss';
 import App from './App.jsx';
 import * as serviceWorker from './serviceWorker';
 

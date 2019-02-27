@@ -12,44 +12,57 @@ class App extends Component {
 
   state = {
     items: [],
-    loading: false
+    loader: false
   }
 
   searchBook = (query) => {
     this.setState({
-      loading: true
+      loader: true
     })
     const readBooks = fb.functions().httpsCallable('searchBook');
     readBooks(query).then(res => {
-      console.log(res);
-      this.setState({
-        loading: false,
-        items: res.data.items
-      })
+      if (res.data.items) {
+        this.setState({
+          loader: false,
+          items: res.data.items
+        })
+      } else {
+        this.setState({
+          loader: false,
+          items: []
+        }, () => {
+          let notification = document.getElementById("toast")
+          notification.className = "show";
+          setTimeout(() => { notification.className = notification.className.replace("show", ""); }, 4000);
+        })
+      }
     })
+      .catch(err => {
+        console.log(err);
+      })
   }
 
   reset = () => {
     this.setState({
       items: []
-    }, () => {
-      console.log(this.state.items)
     })
   }
+
   render() {
     return (
       <div className="App">
+        <div id="toast"><div id="desc">No results! Try with another query please.</div></div>
         <div className="upper">
           <h1>BOOK FINDER</h1>
           <Searchbar search={(query) => this.searchBook(query)} reset={this.reset} />
         </div>
         <div className="lower">
           {
-            this.state.loading ?
-              <div className="loader">Loading...</div> :
+            this.state.loader ?
+              <div className="loader">Loader...</div> :
               this.state.items.length > 1 ?
                 <Gallery items={this.state.items} /> :
-                <p className="notgallery" ><span>☹️</span> Nothing Here Yet - Try Searching For A Book! </p>
+                <p className="notgallery" ><span role="img" aria-label="sadman" >☹️</span> Nothing Here Yet - Try Searching For A Book! </p>
           }
         </div>
       </div>

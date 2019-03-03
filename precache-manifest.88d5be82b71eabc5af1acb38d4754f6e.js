@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/chingu-soloproject/static/js/runtime~main.73b13e4e.js"
   },
   {
-    "revision": "4242dd7376011ba2d9ed",
-    "url": "/chingu-soloproject/static/js/main.4242dd73.chunk.js"
+    "revision": "d00592477b2abbc8c570",
+    "url": "/chingu-soloproject/static/js/main.d0059247.chunk.js"
   },
   {
     "revision": "ed9ecd26a765b16ea57b",
     "url": "/chingu-soloproject/static/js/2.ed9ecd26.chunk.js"
   },
   {
-    "revision": "4242dd7376011ba2d9ed",
-    "url": "/chingu-soloproject/static/css/main.133d1fd6.chunk.css"
+    "revision": "d00592477b2abbc8c570",
+    "url": "/chingu-soloproject/static/css/main.96b638e1.chunk.css"
   },
   {
-    "revision": "efe799305c50448181e5222896bd1250",
+    "revision": "df763cf88745a78a38f7feca4fa8e653",
     "url": "/chingu-soloproject/index.html"
   }
 ];

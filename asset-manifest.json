@@ -1,13 +1,13 @@
 {
-  "main.css": "/chingu-soloproject/static/css/main.133d1fd6.chunk.css",
-  "main.js": "/chingu-soloproject/static/js/main.4242dd73.chunk.js",
-  "main.js.map": "/chingu-soloproject/static/js/main.4242dd73.chunk.js.map",
+  "main.css": "/chingu-soloproject/static/css/main.96b638e1.chunk.css",
+  "main.js": "/chingu-soloproject/static/js/main.d0059247.chunk.js",
+  "main.js.map": "/chingu-soloproject/static/js/main.d0059247.chunk.js.map",
   "runtime~main.js": "/chingu-soloproject/static/js/runtime~main.73b13e4e.js",
   "runtime~main.js.map": "/chingu-soloproject/static/js/runtime~main.73b13e4e.js.map",
   "static/js/2.ed9ecd26.chunk.js": "/chingu-soloproject/static/js/2.ed9ecd26.chunk.js",
   "static/js/2.ed9ecd26.chunk.js.map": "/chingu-soloproject/static/js/2.ed9ecd26.chunk.js.map",
   "index.html": "/chingu-soloproject/index.html",
-  "precache-manifest.482def8c10c32887b5a054c787abfa4c.js": "/chingu-soloproject/precache-manifest.482def8c10c32887b5a054c787abfa4c.js",
+  "precache-manifest.88d5be82b71eabc5af1acb38d4754f6e.js": "/chingu-soloproject/precache-manifest.88d5be82b71eabc5af1acb38d4754f6e.js",
   "service-worker.js": "/chingu-soloproject/service-worker.js",
-  "static/css/main.133d1fd6.chunk.css.map": "/chingu-soloproject/static/css/main.133d1fd6.chunk.css.map"
+  "static/css/main.96b638e1.chunk.css.map": "/chingu-soloproject/static/css/main.96b638e1.chunk.css.map"
 }

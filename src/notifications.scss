@@ -1,5 +1,5 @@
-#toast,
-#toast2 {
+.toast,
+.toast2 {
   visibility: hidden;
   height: 50px;
   width: fit-content;
@@ -17,16 +17,16 @@
   white-space: nowrap;
 }
 
-#toast #desc,
-#toast2 #desc {
+.toast .desc,
+.toast2 .desc {
   color: #fff;
   padding: 16px;
   overflow: hidden;
   white-space: nowrap;
 }
 
-#toast.show,
-#toast2.show {
+.toast.show,
+.toast2.show {
   visibility: visible;
   animation: fadein 1s, fadeout 1s 3s;
 }

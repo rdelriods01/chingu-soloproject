@@ -12,7 +12,8 @@ class App extends Component {
 
   state = {
     items: [],
-    loader: false
+    loader: false,
+    addClass: false
   }
 
   searchBook = (query) => {
@@ -29,11 +30,8 @@ class App extends Component {
       } else {
         this.setState({
           loader: false,
-          items: []
-        }, () => {
-          let notification = document.getElementById("toast")
-          notification.className = "show";
-          setTimeout(() => { notification.className = notification.className.replace("show", ""); }, 4000);
+          items: [],
+          addClass: true
         })
       }
     })
@@ -49,9 +47,19 @@ class App extends Component {
   }
 
   render() {
+    let toastClass = ["toast"]
+    if (this.state.addClass) {
+      toastClass.push('show');
+      setTimeout(() => {
+        toastClass.pop();
+        this.setState({
+          addClass: false
+        })
+      }, 4000);
+    }
     return (
       <div className="App">
-        <div id="toast"><div id="desc">No results! Try with another query please.</div></div>
+        <div className={toastClass.join(' ')}><div className="desc">No results! Try with another query please.</div></div>
         <div className="upper">
           <h1>BOOK FINDER</h1>
           <Searchbar search={(query) => this.searchBook(query)} reset={this.reset} />
